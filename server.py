@@ -139,7 +139,7 @@ async def offer(request):
 
         if track.kind == "audio":
             pc.addTrack(player.audio)
-            recorder.addTrack(track)
+            #recorder.addTrack(track)
         elif track.kind == "video":
             local_video = VideoTransformTrack(
                 track, transform=params["video_transform"]
@@ -153,7 +153,7 @@ async def offer(request):
 
     # handle offer
     await pc.setRemoteDescription(offer)
-    await recorder.start()
+    #await recorder.start()
 
     # send answer
     answer = await pc.createAnswer()
