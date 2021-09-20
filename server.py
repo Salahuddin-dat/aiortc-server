@@ -149,7 +149,7 @@ async def offer(request):
         @track.on("ended")
         async def on_ended():
             log_info("Track %s ended", track.kind)
-            await recorder.stop()
+            #await recorder.stop()
 
     # handle offer
     await pc.setRemoteDescription(offer)
