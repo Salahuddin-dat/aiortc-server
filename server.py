@@ -114,10 +114,10 @@ async def offer(request):
 
     # prepare local media
     player = MediaPlayer(os.path.join(ROOT, "demo-instruct.wav"))
-    if args.write_audio:
-        recorder = MediaRecorder(args.write_audio)
-    else:
-        recorder = MediaBlackhole()
+    #if args.write_audio:
+   #     recorder = MediaRecorder(args.write_audio)
+   # else:
+    #    recorder = MediaBlackhole()
 
     @pc.on("datachannel")
     def on_datachannel(channel):
